@@ -1,5 +1,19 @@
 \chapter{Schutzmaßnahmen}
 \label{chap:kapitel3}
+Ein vollständiger Schutz vor einem DDoS-Angriff ist nicht möglich. Jedoch gilt es die Hürde für einen Angreifer möglichst hoch zu setzen und einen Angriff so zu erschweren.
+
+Grundsätzlich ist es zunächst wichtig die eigenen Systeme so abzusichern, dass sie möglichst erst gar nicht für einen Angriff verwendet werden können. Das ist zwar keine Maßnahme, welcher der Betroffene eines möglichen DDoS-Angriffs direkt selbst durchführen kann, jedoch ist es eigentlich eine der effektivsten Maßnahmen gegen einen Angriff.
+
+Dazu ist es notwendig, dass besonders bei \ac{iot}-Geräten mehr auf die IT-Security geachtet wird. Einerseits sollten sich dabei die Nutzer dieser Geräte über die Risiken bewusst sein und als Gegenmaßnahme entsprechend ihre Geräte mit regelmäßigen Updates oder ähnlichem versorgen.
+Aber auch die Entwickler von solchen Geräten sollten solche Probleme stets beachten und Produkte angemessen pflegen. Dazu gehört auch Dauer dieser Pflege. Diese ist ebenfalls sehr relevant, da IoT-Geräte auf Kundenseite oft einen wesentlich längeren Lebenszyklus haben als zum Beispiel ein Smartphone.
+
+Wie sich in den letzten Jahren herausgestellt hat, sieht die Praxis leider oft anders aus. Gerade das Botnetz \glqq Mirai\grqq{} hat die Ausmaße nochmals deutlich gemacht. Viel zu oft werden die Standard-Passwörter von IoT-Geräten nicht geändert.
+Logischerweise ist es also auch auf der Seite der möglichen Betroffenen durchaus ratsam sich um einen Schutz gegen DDoS-Angriffe zu kümmern.
+
+\subsection{Aufrüsten von Ressourcen}
+Im ersten Moment scheint es vielleicht sinnvoll die eigenen Ressourcen aufzurüsten. Selten ist das aber eine kluge Lösung. So schreibt auch Norbert Pohlmann \cite{Pohlmann2019}, dass der Kosten-Nutzen-Faktor dabei sehr gering ist. Während eine Verdopplung der eigenen Ressourcen (Bandbreite, CPU, RAM, ...) relativ teuer ist, ist der Aufwand seitens des Angreifers eher gering um auch das verstärkte System lahmzulegen.
+
+\subsection{Beispiel: Cloudflare}
 Eine Abkürzung \ac{cd}, \ac{ci}. Ausgeschrieben \acl{cd}. Verweis zu einem File-Listing \ref{lst:crypter} oder einem Listing im Textfluss \ref{lst:Rggplot} und ein Inline-Listing \lstinline|print("Hello World")|.
 
 \lstinputlisting[language=Java,caption={Ein Listing},label=lst:crypter]{\srcloc/Crypter.java}
@@ -7,4 +21,3 @@ Eine Abkürzung \ac{cd}, \ac{ci}. Ausgeschrieben \acl{cd}. Verweis zu einem File
 \begin{lstlisting}[language=R,caption=Beispielaufruf ldply-Funktion in R, label=lst:Rggplot]
 ggplot(data = data, mapping = aes(x=timestamp, y=score) + geom_line()
 \end{lstlisting}
-			

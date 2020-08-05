@@ -10,8 +10,14 @@ Aber auch die Entwickler von solchen Geräten sollten solche Probleme stets beac
 Wie sich in den letzten Jahren herausgestellt hat, sieht die Praxis leider oft anders aus. Gerade das Botnetz \glqq Mirai\grqq{} hat die Ausmaße nochmals deutlich gemacht. Viel zu oft werden die Standard-Passwörter von IoT-Geräten nicht geändert.
 Logischerweise ist es also auch auf der Seite der möglichen Betroffenen durchaus ratsam sich um einen Schutz gegen DDoS-Angriffe zu kümmern.
 
-\subsection{Aufrüsten von Ressourcen}
+\section{Aufrüsten von Ressourcen}
+\label{sec:k3rsc}
 Im ersten Moment scheint es vielleicht sinnvoll die eigenen Ressourcen aufzurüsten. Selten ist das aber eine kluge Lösung. So schreibt auch Norbert Pohlmann \cite{Pohlmann2019}, dass der Kosten-Nutzen-Faktor dabei sehr gering ist. Während eine Verdopplung der eigenen Ressourcen (Bandbreite, CPU, RAM, ...) relativ teuer ist, ist der Aufwand seitens des Angreifers eher gering um auch das verstärkte System lahmzulegen.
+
+\section{Blackhole-Routing}
+Eine relativ einfache Abwehrmöglichkeit ist das sogenannte Blackhole-Routing. Dabei wird der eingehende Netzwerkverkehr (zum Beispiel über einen Reverse Proxy) gefiltert. \glqq Sauberer\grqq{} Netzwerkverkehr wird zum System weitergeleitet, bösartiger Netzwerkverkehr wird quasi ins Nichts (das Blackhole) geleitet. Neben der zusätzlichen Latenz, die hierbei hinzugefügt wird, ist vor allem die Unterscheidung von gutem und schlechtem Datenverkehr das Problem. Passieren hierbei Fehler, so besteht entweder die Gefahr das eigentliche Nutzer das System nicht nutzen können. Andererseits ist es aber genauso möglich, dass Angreifer trotzdem zum System weitergeleitet werden. Gerade wenn diese für den Angriff variable IP-Adressen benutzen, kann die Effektivität vom diesem Mechanismus durchaus eingeschränkt sein. \cite{CloudflareBlackhole}
+
+Ebenfalls zielt diese Methode eher auf den Schutz der Server-Ressourcen selbst ab. Wird beim Angriff aber versucht bereits den Kommunikationskanal vollständig zu belegen, so ist diese Methode ebenfalls nicht ganz optimal. Sie funktioniert in dem Fall dann nur, wenn dem Proxy mehr Bandbreite zur Verfügung steht als dem eigentlichen System, für welches der Angriff bestimmt ist. An diesem Punkt ist allerdings auch wieder das Problem der Aufrüstung der Ressourcen zu berücksichtigen, welches im vorigen Abschnitt \ref{sec:k3rsc} erläutert wurde.
 
 \subsection{Beispiel: Cloudflare}
 Eine Abkürzung \ac{cd}, \ac{ci}. Ausgeschrieben \acl{cd}. Verweis zu einem File-Listing \ref{lst:crypter} oder einem Listing im Textfluss \ref{lst:Rggplot} und ein Inline-Listing \lstinline|print("Hello World")|.

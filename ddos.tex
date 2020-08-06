@@ -58,23 +58,11 @@
 \addchap{\hsmaabbreviations}
 \input{kapitel/abkuerzungen}
 
-% Tabellenverzeichnis erzeugen
-\cleardoublepage
-\phantomsection
-\addcontentsline{toc}{chapter}{\hsmalistoftables}
-\listoftables
-
 % Abbildungsverzeichnis erzeugen
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{\hsmalistoffigures}
 \listoffigures
-
-% Listingverzeichnis erzeugen
-\cleardoublepage
-\phantomsection
-\addcontentsline{toc}{chapter}{\hsmalistings}
-\lstlistoflistings
 
 % Literaturverzeichnis erzeugen
 \begin{flushleft}
@@ -87,10 +75,5 @@
 %\phantomsection
 %\addcontentsline{toc}{chapter}{\hsmaindex}
 %\printindex
-
-% Anhang. Wenn Sie keinen Anhang haben, entfernen Sie einfach
-% diesen Teil.
-\appendix
-\input{kapitel/anhang_a}
 
 \end{document}

@@ -19,6 +19,9 @@ Eine weitere Abwehrmöglichkeit ist das sogenannte Blackhole-Routing. Dabei wird
 
 Ebenfalls zielt diese Methode eher auf den Schutz der Server-Ressourcen selbst ab. Wird beim Angriff aber versucht bereits den Kommunikationskanal vollständig zu belegen, so ist diese Methode ebenfalls nicht ganz optimal. Sie funktioniert in dem Fall dann nur, wenn dem Proxy mehr Bandbreite zur Verfügung steht als dem eigentlichen System, für welches der Angriff bestimmt ist. An diesem Punkt ist allerdings auch wieder das Problem der Aufrüstung der Ressourcen zu berücksichtigen, welches im vorigen Abschnitt \ref{sec:k3rsc} erläutert wurde.
 
+\section{DNS Sinkholing}
+Das DNS Sinkholing ist eine Art des DNS Spoofings und kann auch bei dem Schutz gegen DDoS-Angriffe helfen. Dabei wird bei der DNS-Anfrage für die URL beziehungsweise dem dahinterstehenden System, an welches sich der Angriff richtet, zwar eine gültige IP-Adresse zurückgegeben, diese ist im Falle eines Angriffs beziehungsweise einer bösartigen Anfrage allerdings die Adresse des sogenannten Sinkholes. Das kann die Adresse von einem extra bereitgestellten Server zur Analyse des Angriffs sein. Es ist aber auch möglich, dass die Adresse so gewählt wird, dass ein Routing zu ihr nicht möglich ist. In jedem Fall wird aber versucht, dass der Angreifer die echte IP-Adresse nicht erhält und diese somit weiter unter Normallast Anfragen erhält. \cite{Kaimal2019}
+
 \section{SYN-Cookies}
 Um speziell gegen SYN-Flooding-Angriffe vorzugehen gibt es SYN-Cookies. Mithilfe dieser lässt sich die Effektivität von eines SYN-Flooding-Angriffes sehr stark vermindern.
 

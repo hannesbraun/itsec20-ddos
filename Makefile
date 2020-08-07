@@ -4,7 +4,7 @@ LATEX = pdflatex
 BIBTEX = biber
 MAKEINDEX = makeindex
 
-INCLUDES = kapitel/abkuerzungen.tex docinfo.tex preambel.tex titelblatt.tex literatur.bib bilder/*.jpg bilder/kapitel*/*.png
+INCLUDES = docinfo.tex preambel.tex titelblatt.tex literatur.bib bilder/*.jpg bilder/kapitel*/*.png
 
 CHAPTERS = kapitel/kapitel*.tex
 

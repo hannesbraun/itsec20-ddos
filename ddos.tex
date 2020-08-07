@@ -45,24 +45,15 @@
 \label{lastpage}
 
 % Neue Seite
-\cleardoublepage
+% \clearpage
 
 % Backmatter mit normalem Zeilenabstand setzen
-\singlespacing
+%\singlespacing
 
 % Römische Ziffern für die "Back-Matter", fortlaufend mit "Front-Matter"
 \pagenumbering{roman}
 %\setcounter{page}{\value{frontmatterpage}}
 \setcounter{page}{0}
-% Abkürzungsverzeichnis
-\addchap{\hsmaabbreviations}
-\input{kapitel/abkuerzungen}
-
-% Abbildungsverzeichnis erzeugen
-\cleardoublepage
-\phantomsection
-\addcontentsline{toc}{chapter}{\hsmalistoffigures}
-\listoffigures
 
 % Literaturverzeichnis erzeugen
 \begin{flushleft}
